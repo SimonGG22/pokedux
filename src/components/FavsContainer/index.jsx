@@ -4,7 +4,6 @@ import { PokemonCard } from "../PokemonCard"
 
 const FavsContainer = () => {
     const pokemons = useSelector(state =>state.pokemons.favorites)
-    console.log(pokemons)
 
     return (
         <div className="w-full h-auto mb-10">

@@ -32,4 +32,4 @@ export const pokemonSlice = createSlice ({
 
 export const { setPokemons, addFavPokemon } = pokemonSlice.actions
 
-export default pokemonSlice .reducer
+export default pokemonSlice.reducer
