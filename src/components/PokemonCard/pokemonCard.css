@@ -1,0 +1,3 @@
+.pokemon-container:hover .details {
+    visibility: visible;
+}
