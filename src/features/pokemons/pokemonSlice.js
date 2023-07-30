@@ -15,12 +15,16 @@ export const pokemonSlice = createSlice ({
         addFavPokemon: (state, action) => {
             const pokemonFound = state.pokemons.find(pokemon => pokemon.id === action.payload)
 
+            if (!pokemonFound) return 
+
+            const indexInFavorites = state.favorites.findIndex(pokemon => pokemon.id === action.payload)
+
             if (pokemonFound.favorite === false) {
                 pokemonFound.favorite = true
                 state.favorites.push(state.pokemons[state.pokemons.indexOf(pokemonFound)])
             } else {
                 pokemonFound.favorite = false
-                state.favorites.splice(state.favorites.indexOf(pokemonFound), 1)
+                state.favorites.splice(indexInFavorites, 1)
             }
         },
     }
