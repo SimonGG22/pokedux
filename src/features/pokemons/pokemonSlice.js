@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
     pokemons: [],
-    favorites:[]
+    favorites:[],
+    pokemonDetails:'',
 }
 
 export const pokemonSlice = createSlice ({
@@ -27,9 +28,12 @@ export const pokemonSlice = createSlice ({
                 state.favorites.splice(indexInFavorites, 1)
             }
         },
+        setPokemonDetails: (state, action) => {
+            state.pokemonDetails = action.payload
+        }
     }
 })
 
-export const { setPokemons, addFavPokemon } = pokemonSlice.actions
+export const { setPokemons, addFavPokemon, setPokemonDetails } = pokemonSlice.actions
 
 export default pokemonSlice.reducer

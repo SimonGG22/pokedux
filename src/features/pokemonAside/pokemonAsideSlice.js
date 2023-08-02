@@ -7,9 +7,12 @@ export const pokemonAsideSlice = createSlice ({
         openAside: (state, action) => {
             return action.payload
         },
+        closeAside: (state, action) => {
+            return action.payload
+        },
     }
 })
 
-export const { openAside } = pokemonAsideSlice.actions
+export const { openAside, closeAside } = pokemonAsideSlice.actions
 
 export default pokemonAsideSlice.reducer
