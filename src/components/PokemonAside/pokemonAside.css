@@ -1,15 +1,45 @@
-.progress-hp::-moz-progress-bar, .progress-hp::-webkit-progress-bar {
+progress::-webkit-progress-bar {
+    background-color: whitesmoke;
+}
+.progress-hp::-webkit-progress-value {
+    background: #3c723b;
+}
+.progress-hp::-moz-progress-bar {
     background: #3c723b;
 }
 
-.progress-attack::-moz-progress-bar, .progress-hp::-webkit-progress-bar {
+.progress-attack::-moz-progress-bar {
+    background: #ca0808;
+}
+.progress-attack::-webkit-progress-value {
     background: #ca0808;
 }
 
-.progress-sp-attack::-moz-progress-bar, .progress-hp::-webkit-progress-bar {
+.progress-defense::-moz-progress-bar {
+    background: #0064b4;
+}
+.progress-defense::-webkit-progress-value {
+    background: #0064b4;
+}
+
+
+.progress-sp-attack::-moz-progress-bar {
+    background: #ca0808;
+}
+.progress-sp-attack::-webkit-progress-value {
     background: #ca0808;
 }
 
-.progress-sp-defense::-moz-progress-bar, .progress-hp::-webkit-progress-bar {
+.progress-sp-defense::-moz-progress-bar {
     background: #3c723b;
+}
+.progress-sp-defense::-webkit-progress-value {
+    background: #3c723b;
+}
+
+.progress-speed::-moz-progress-bar {
+    background: #0064b4;
+}
+.progress-speed::-webkit-progress-value {
+    background: #0064b4;
 }

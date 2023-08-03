@@ -70,33 +70,32 @@ const PokemonAside = () => {
                 <div className="flex flex-col gap-2 items-end">
                     <div className="flex gap-1 relative">
                         <p className="font-bold">Hp</p>
-                        <progress className="progress-hp" max="160" value={pokemonFound?.stats[0].base_stat}></progress>
+                        <progress className="progress-hp h-6" max="160" value={pokemonFound?.stats[0].base_stat}></progress>
                         <span className="absolute right-[73px] text-black font-bold">{pokemonFound?.stats[0].base_stat}</span>
                     </div>
                     <div className="flex gap-1 relative">
                         <p className="font-bold">Attack</p>
-                        <progress className="progress-attack" max="160" value={pokemonFound?.stats[1].base_stat}></progress>
+                        <progress className="progress-attack h-6" max="160" value={pokemonFound?.stats[1].base_stat}></progress>
                         <span className="absolute right-[73px] text-black font-bold">{pokemonFound?.stats[1].base_stat}</span>
                     </div>
                     <div className="flex gap-1 relative">
                         <p className="font-bold">Defense</p>
-                        <progress max="160" value={pokemonFound?.stats[2].base_stat}></progress>
+                        <progress className="progress-defense h-6" max="160" value={pokemonFound?.stats[2].base_stat}></progress>
                         <span className="absolute right-[73px] text-black font-bold">{pokemonFound?.stats[2].base_stat}</span>
                     </div>
                     <div className="flex gap-1 relative">
                         <p className="font-bold">Special-attack</p>
-                        <progress className="progress-sp-attack" max="160" value={pokemonFound?.stats[3].base_stat}></progress>
+                        <progress className="progress-sp-attack h-6" max="160" value={pokemonFound?.stats[3].base_stat}></progress>
                         <span className="absolute right-[73px] text-black font-bold">{pokemonFound?.stats[3].base_stat}</span>
                     </div>
                     <div className="flex gap-1 relative">
                         <p className="font-bold">Special-defense</p>
-                        <progress className="progress-sp-defense
-                        " max="160" value={pokemonFound?.stats[4].base_stat}></progress>
+                        <progress className="progress-sp-defense h-6" max="160" value={pokemonFound?.stats[4].base_stat}></progress>
                         <span className="absolute right-[73px] text-black font-bold">{pokemonFound?.stats[4].base_stat}</span>
                     </div>
                     <div className="flex gap-1 relative">
                         <p className="font-bold">Speed</p>
-                        <progress max="160" value={pokemonFound?.stats[5].base_stat}></progress>
+                        <progress className="progress-speed h-6" max="160" value={pokemonFound?.stats[5].base_stat}></progress>
                         <span className="absolute right-[73px] text-black font-bold">{pokemonFound?.stats[5].base_stat}</span>
                     </div>
                 </div>

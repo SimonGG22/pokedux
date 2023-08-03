@@ -1,3 +1,5 @@
-.pokemon-container:hover .details {
-    visibility: visible;
+@media (hover: hover) {
+    .pokemon-container:hover .details {
+      visibility: visible;
+    }
 }
