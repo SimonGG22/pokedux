@@ -28,7 +28,7 @@ const PokemonAside = () => {
     }
 
     return (
-        <aside className={`${isAsideOpen ? 'visible' : 'invisible'} w-3/4 md:w-2/4 h-full flex flex-col justify-center items-center fixed top-2 right-3 bg-zinc-700 z-20`}>
+        <aside className={`${isAsideOpen ? 'visible' : 'invisible'} w-[95%] md:w-2/4 h-full flex flex-col justify-center items-center fixed top-0 right-0 md:top-2 md:right-3 bg-zinc-700 z-20`}>
             <BsFillXSquareFill onClick={() => handleOpenAside()} className="w-10 h-10 absolute top-10 right-10 hover:scale-125"/>
             <div className="flex flex-col justify-center items-center gap-3 w-5/6 h-96">
                 <h2 className='text-3xl font-bold'>{pokemonFound?.name}</h2>
