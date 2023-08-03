@@ -9,6 +9,26 @@ import { PokemonCard } from "../PokemonCard"
 const PokemonList = () => {
     const pokemons = useSelector(state =>state.pokemons.pokemons)
 
+    const inputSearch = useSelector(state =>state.pokemons.pokemonSearch)
+
+    const filteredFavsPokemons = pokemons?.filter(pokemon => pokemon.name.toLowerCase().includes(inputSearch?.toLowerCase()))
+
+    const renderView = () => {
+      if (filteredFavsPokemons.length > 0) {
+              return filteredFavsPokemons.map((pokemon) => {
+                  return (
+                    <div key={pokemon.id} className="flex-1">
+                      <PokemonCard pokemon={pokemon} />
+                    </div>
+                  )
+              })
+      } else {
+          return (
+              <p>no hay coincidencias para tu búsqueda</p>
+          )
+      }
+  }
+
     const dispatch = useDispatch() 
 
     useEffect(() => {
@@ -29,13 +49,7 @@ const PokemonList = () => {
 
     return (
         <div className="w-full flex flex-wrap gap-5" >
-            {pokemons.map((pokemon) => {
-                return (
-                    <div key={pokemon.id} className="flex-1">
-                        <PokemonCard pokemon={pokemon} />
-                    </div>
-                )
-            })}
+            {renderView()}
         </div>
     )
 }
